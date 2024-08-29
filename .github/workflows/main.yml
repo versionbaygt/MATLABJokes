@@ -3,6 +3,9 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Tests
+    strategy:
+      matrix:
+        release: [R2023b, R2024a]
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -10,6 +13,6 @@ jobs:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2023b
+          release: ${{ matrix.release }}
       - name: Run tests
         uses: matlab-actions/run-tests@v2
