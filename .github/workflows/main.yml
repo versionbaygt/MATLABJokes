@@ -1,5 +1,11 @@
 name: Generate Test and Coverage Artifacts
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   my-job:
     name: Run MATLAB Tests

@@ -7,7 +7,7 @@
     <param.summary>Get MATLAB to tell you a joke.</param.summary>
     <param.description>It is always nice to get MATLAB to put a smile on your face.</param.description>
     <param.screenshot>${PROJECT_ROOT}/images/MATLAB Jokes.png</param.screenshot>
-    <param.version>0.1</param.version>
+    <param.version>0.1.1</param.version>
     <param.output>${PROJECT_ROOT}/MATLAB Jokes.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
@@ -24,7 +24,9 @@
     <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
     <param.examples />
     <param.demosxml />
-    <param.apps />
+    <param.apps>
+      <file>${PROJECT_ROOT}/toolbox/app/jokeApp.mlappinstall</file>
+    </param.apps>
     <param.registered.apps />
     <param.docs>${PROJECT_ROOT}/toolbox/info.xml</param.docs>
     <param.getting.started.guide>${PROJECT_ROOT}/toolbox/doc/GettingStarted.mlx</param.getting.started.guide>
@@ -55,7 +57,6 @@
       <param.exclude.pcodedmfiles />
       <param.examples />
       <param.demosxml />
-      <param.apps />
       <param.registered.apps />
       <param.matlabpath.excludes />
       <param.javaclasspath.excludes />
@@ -78,6 +79,7 @@
       <file>${PROJECT_ROOT}/toolbox</file>
     </fileset.rootdir>
     <fileset.rootfiles>
+      <file>${PROJECT_ROOT}/toolbox/app</file>
       <file>${PROJECT_ROOT}/toolbox/doc</file>
       <file>${PROJECT_ROOT}/toolbox/examples</file>
       <file>${PROJECT_ROOT}/toolbox/info.xml</file>

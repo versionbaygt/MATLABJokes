@@ -1,0 +1,75 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3440575433" file="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app" name="jokeApp" target="target.mlapps" target-name="Package App">
+    <param.appname>jokeApp</param.appname>
+    <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
+    <param.email />
+    <param.company>VersionBay</param.company>
+    <param.icon>${PROJECT_ROOT}/jokeApp_resources/icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}/jokeApp_resources/icon_48.png</file>
+      <file>${PROJECT_ROOT}/jokeApp_resources/icon_24.png</file>
+      <file>${PROJECT_ROOT}/jokeApp_resources/icon_16.png</file>
+    </param.icons>
+    <param.summary>MATLAB App that tells a joke.</param.summary>
+    <param.description>Simple MATLAB App that gets installed with MATLAB Jokes Toolbox.</param.description>
+    <param.screenshot>/private/var/folders/p9/j38tvt417hq_byjpbmn1hv580000gn/T/tp7ff699ea_758a_4fde_ba09_6a20203ea6ef.png</param.screenshot>
+    <param.version>0.1</param.version>
+    <param.products.name>
+      <item>MATLAB</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+    </param.products.id>
+    <param.products.version>
+      <item>24.1</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>91af28c3-fee3-4fef-ab37-7db3dee1da8f</param.guid>
+    <unset>
+      <param.email />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}/jokeApp.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/internal/get_joke.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}/displayJoke.html</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox" name="app" optional="false">/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2024a.app</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>14.6.1</osver>
+      <os32>true</os32>
+      <os64>false</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
