@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#prompt {
+  font-family: sans-serif;
+  text-align:center;
+  border-radius: 5px;
+  background-color: #0070A2;
+  padding: 20px;
+    color: white;
+    
+}
+
+#dataDisplay {
+  border-radius: 5px;
+  height: 30vh;
+  padding: 12px 20px;
+  color: white;
+  font-size: 30px;
+}
+</style>
+
+<script type="text/javascript">
+         
+        function setup(htmlComponent) {
+		          
+            htmlComponent.addEventListener("DataChanged", function(event) {
+            document.getElementById("dataDisplay").innerHTML = htmlComponent.Data;
+            });     
+        }
+</script>
+</head>
+
+<body>
+     <div id="prompt">
+		
+	<span><label for="prompt"><strong>MATLAB Jokes  </strong></label></span>
+	<br/><br/>
+	<div id ="dataDisplay">
+	Please set data in MATLAB...
+	</div>
+		
+     </div>
+</body>
+
+</html>
