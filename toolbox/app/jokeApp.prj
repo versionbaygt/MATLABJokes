@@ -1,11 +1,15 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="50847578" file="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app" name="jokeApp" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3440575433" file="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app" name="jokeApp" target="target.mlapps" target-name="Package App">
     <param.appname>jokeApp</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />
     <param.company>VersionBay</param.company>
-    <param.icon />
-    <param.icons />
+    <param.icon>${PROJECT_ROOT}/jokeApp_resources/icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}/jokeApp_resources/icon_48.png</file>
+      <file>${PROJECT_ROOT}/jokeApp_resources/icon_24.png</file>
+      <file>${PROJECT_ROOT}/jokeApp_resources/icon_16.png</file>
+    </param.icons>
     <param.summary>MATLAB App that tells a joke.</param.summary>
     <param.description>Simple MATLAB App that gets installed with MATLAB Jokes Toolbox.</param.description>
     <param.screenshot>/private/var/folders/p9/j38tvt417hq_byjpbmn1hv580000gn/T/tp7ff699ea_758a_4fde_ba09_6a20203ea6ef.png</param.screenshot>
@@ -24,8 +28,6 @@
     <param.guid>91af28c3-fee3-4fef-ab37-7db3dee1da8f</param.guid>
     <unset>
       <param.email />
-      <param.icon />
-      <param.icons />
       <param.platforms />
       <param.output />
     </unset>
