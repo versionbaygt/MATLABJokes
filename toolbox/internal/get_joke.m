@@ -35,6 +35,9 @@ switch NameValueArgs.language
             "Why did the software engineer stay cool under pressure? Because he had excellent exception handling."
             "Given a circular pizza with radius z and thickness a, return the pizza's volume. pi*z*z*a"
             ];
+    case "portuguese"
+        jokes = ["Dada uma pizza circular com raio z e espessura a, retorne o volume da pizza. pi*z*z*a"
+            "O meu password sao os ultimos 16 digitos de Pi."];
 
     otherwise
         error("Language not supported")
