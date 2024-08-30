@@ -7,7 +7,7 @@
     <param.summary>Get MATLAB to tell you a joke.</param.summary>
     <param.description>It is always nice to get MATLAB to put a smile on your face.</param.description>
     <param.screenshot>${PROJECT_ROOT}/images/MATLAB Jokes.png</param.screenshot>
-    <param.version>0.1.1</param.version>
+    <param.version>0.2.0</param.version>
     <param.output>${PROJECT_ROOT}/MATLAB Jokes.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
