@@ -12,7 +12,8 @@ jobs:
     strategy:
       matrix:
         release: [R2021a, R2021b, R2022a, R2022b, R2023a, R2023b, R2024a]
-    runs-on: ubuntu-latest
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
