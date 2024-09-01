@@ -21,6 +21,7 @@ end
 
 function releaseTask(~)
 projectFile = "toolboxPackaging.prj";
-outputfile = "Jokes";
-matlab.addons.toolbox.packageToolbox(projectFile, outputfile)
+opts = matlab.addons.toolbox.ToolboxOptions(projectFile);
+opts.OutputFile = opts.OutputFile.replace(" in MATLAB","")
+matlab.addons.toolbox.packageToolbox(opts);
 end
