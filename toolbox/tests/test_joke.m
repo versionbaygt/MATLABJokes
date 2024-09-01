@@ -1,7 +1,7 @@
 classdef test_joke < matlab.unittest.TestCase
     methods (Test)
         % Test methods
-        function exampleTest(testCase)
+        function exampleTest(TestCase) %#ok<MANU>
             joke()
         end
     end

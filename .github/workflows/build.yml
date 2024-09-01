@@ -1,0 +1,59 @@
+name: Run Default Tasks in Build File
+on:
+    push:
+      tags:
+        - 'v*.*.*' # This triggers the workflow when a new version tag is pushed
+jobs:
+  build:
+    name: Run MATLAB Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v2
+      - name: Run build
+        uses: matlab-actions/run-build@v2
+      - name: Archive MATLAB Toolbox Installer
+        run: |
+          mkdir artifacts
+          mv Jokes.mltbx artifacts/
+      - name: Upload MATLAB Toolbox Installer
+        uses: actions/upload-artifact@v3
+        with:
+          name: jokes-toolbox
+          path: artifacts/Jokes.mltbx
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Download MATLAB Toolbox Installer
+      uses: actions/download-artifact@v3
+      with:
+        name: jokes-toolbox
+
+    - name: Create GitHub Release with Auto-generated Release Notes
+      id: create_release
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const { data: release } = await github.repos.createRelease({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            tag_name: context.ref.replace('refs/tags/', ''),
+            name: context.ref.replace('refs/tags/', ''),
+            generate_release_notes: true, // Automatically generate release notes
+          });
+          return release
+
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: artifacts/Jokes.mltbx
+        asset_name: Jokes.mltbx
+        asset_content_type: application/octet-stream
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
