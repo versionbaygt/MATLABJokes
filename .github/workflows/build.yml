@@ -34,7 +34,7 @@ jobs:
         name: jokes-toolbox
     
     - name: Create GitHub Release with Auto-generated Release Notes
-      run: gh release create ${{ github.ref }} artifacts/Jokes.mltbx --generate-notes
+      run: gh release create ${{ github.ref }} /artifacts/Jokes.mltbx --generate-notes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
