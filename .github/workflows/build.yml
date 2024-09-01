@@ -19,7 +19,7 @@ jobs:
           mkdir artifacts
           mv Jokes.mltbx artifacts/
       - name: Upload MATLAB Toolbox Installer
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jokes-toolbox
           path: artifacts/Jokes.mltbx
@@ -29,31 +29,21 @@ jobs:
     
     steps:
     - name: Download MATLAB Toolbox Installer
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: jokes-toolbox
+    - name: Set up GitHub CLI
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+      
+    - name: Install GitHub CLI
+      run: |
+        npm install -g @github/gh
 
     - name: Create GitHub Release with Auto-generated Release Notes
-      id: create_release
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const { data: release } = await github.repos.createRelease({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            tag_name: context.ref.replace('refs/tags/', ''),
-            name: context.ref.replace('refs/tags/', ''),
-            generate_release_notes: true, // Automatically generate release notes
-          });
-          return release
-
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: artifacts/Jokes.mltbx
-        asset_name: Jokes.mltbx
-        asset_content_type: application/octet-stream
+      run: |
+        gh release create ${{ github.ref }} artifacts/Jokes.mltbx --generate-notes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+      
