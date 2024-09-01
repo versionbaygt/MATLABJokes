@@ -1,6 +1,6 @@
 function j = get_joke(NameValueArgs)
 arguments
-    NameValueArgs.jokeNumber
+    NameValueArgs.jokeNumber {mustBePositive}
     NameValueArgs.language string = "english"
 end
 

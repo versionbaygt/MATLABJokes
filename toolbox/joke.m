@@ -1,7 +1,7 @@
 function joke(NameValueArgs)
 
 arguments
-    NameValueArgs.jokeNumber
+    NameValueArgs.jokeNumber {mustBePositive}
     NameValueArgs.language string = "english"
 end
 
