@@ -15,11 +15,20 @@ plan("test") = TestTask;
 % Make the "archive" task the default task in the plan
 plan.DefaultTasks = "release";
 
-plan("release").Dependencies = ["test"];
+plan("release").Dependencies = ["test", "build"];
 
 end
 
+function buildTask(context)
+currentPath = context.Plan.RootFolder;
+matlab.apputil.package(fullfile(currentPath,"toolbox", "app", "jokeApp.prj"));
+while (~exist(fullfile(currentPath,"toolbox", "app", "jokeApp.mlappinstall"),"file"))
+    pause(0.1)
+end
+end
+
 function releaseTask(context)
+
 projectFile = "toolboxPackaging.prj";
 currentPath = context.Plan.RootFolder; % Needed of creating releases
 opts = matlab.addons.toolbox.ToolboxOptions(projectFile);
