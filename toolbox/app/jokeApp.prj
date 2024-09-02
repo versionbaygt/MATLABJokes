@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3116142273" file="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app" name="jokeApp" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3576785632" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/toolbox/app/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/toolbox/app" name="jokeApp" target="target.mlapps" target-name="Package App">
     <param.appname>jokeApp</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />
@@ -12,7 +12,7 @@
     </param.icons>
     <param.summary>MATLAB App that tells a joke.</param.summary>
     <param.description>Simple MATLAB App that gets installed with MATLAB Jokes Toolbox.</param.description>
-    <param.screenshot>/Users/gareth/Documents/MATLAB/MATLABJokes/images/Jokes in MATLAB.png</param.screenshot>
+    <param.screenshot />
     <param.version>0.2</param.version>
     <param.products.name>
       <item>MATLAB</item>
@@ -28,21 +28,20 @@
     <param.guid>91af28c3-fee3-4fef-ab37-7db3dee1da8f</param.guid>
     <unset>
       <param.email />
+      <param.screenshot />
       <param.platforms />
       <param.output />
     </unset>
     <fileset.main>
       <file>${PROJECT_ROOT}/jokeApp.mlapp</file>
     </fileset.main>
-    <fileset.depfun>
-      <file>/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/internal/get_joke.m</file>
-    </fileset.depfun>
+    <fileset.depfun />
     <fileset.resources>
       <file>${PROJECT_ROOT}/displayJoke.html</file>
     </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file location="/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox" name="app" optional="false">/Users/gareth/Documents/MATLAB/MATLABJokes/toolbox/app</file>
+      <file location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/toolbox" name="app" optional="false">/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/toolbox/app</file>
     </build-deliverables>
     <workflow />
     <matlab>
