@@ -19,9 +19,9 @@ plan("release").Dependencies = ["test"];
 
 end
 
-function releaseTask(~)
+function releaseTask(context)
 projectFile = "toolboxPackaging.prj";
-currentPath = pwd; % Needed of creating releases
+currentPath = context.Plan.RootFolder; % Needed of creating releases
 opts = matlab.addons.toolbox.ToolboxOptions(projectFile);
 opts.OutputFile = opts.OutputFile.replace(" in MATLAB","");
 opts.ToolboxGettingStartedGuide = fullfile(currentPath,"toolbox","doc","GettingStarted.mlx");
