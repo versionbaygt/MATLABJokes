@@ -1,6 +1,6 @@
 [![View Jokes in MATLAB on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/172039-jokes-in-matlab)
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=versionbaygt/MATLABJokes)
-[![Open Repo in GitHub](https://img.shields.io/badge/GitHub-repo-blue?logo=github)](https://github.com/versionbaygt/MATLABJokes)
+[![Open Repo in GitHub](https://img.shields.io/badge/-repo-0076A8?logo=github&labelColor=D95319)](https://github.com/versionbaygt/MATLABJokes)
 
 # Jokes in MATLAB Toolbox
 
