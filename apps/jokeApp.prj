@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1678272881" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3097013393" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
     <param.appname>jokeApp</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />
@@ -12,7 +12,7 @@
     </param.icons>
     <param.summary>MATLAB App that tells a joke.</param.summary>
     <param.description>Simple MATLAB App that gets installed with MATLAB Jokes Toolbox.</param.description>
-    <param.screenshot />
+    <param.screenshot>/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/images/Jokes in MATLAB.png</param.screenshot>
     <param.version>0.2</param.version>
     <param.products.name>
       <item>MATLAB</item>
@@ -28,7 +28,6 @@
     <param.guid>91af28c3-fee3-4fef-ab37-7db3dee1da8f</param.guid>
     <unset>
       <param.email />
-      <param.screenshot />
       <param.platforms />
       <param.output />
     </unset>
