@@ -22,9 +22,10 @@ end
 function buildTask(context)
 currentPath = context.Plan.RootFolder;
 matlab.apputil.package(fullfile(currentPath, "apps", "jokeApp.prj"));
-while (~exist(fullfile(currentPath,"toolbox", "jokeApp.mlappinstall"),"file"))
+while (~exist(fullfile(currentPath, "apps", "jokeApp.mlappinstall"),"file"))
     pause(0.1)
 end
+movefile(fullfile(currentPath, "apps", "jokeApp.mlappinstall"), fullfile(currentPath, "toolbox"))
 end
 
 function releaseTask(~)
