@@ -40,6 +40,13 @@ switch NameValueArgs.language
             "Dada uma pizza circular com raio z e espessura a, retorne o volume da pizza. pi*z*z*a"
             "O meu password sao os ultimos 16 digitos de Pi."
             ];
+    case "dutch"
+        jokes = [
+            "Mijn software heeft nooit bugs. Het ontwikkelt gewoon willekeurige functies."
+            "Mijn wachtwoord is de laatste 16 cijfers van Pi."
+            "Ik zou je een UDP-grap vertellen, maar je krijgt hem misschien niet."
+            "Gegeven een cirkelvormige pizza met straal z en dikte a, geef het volume van de pizza terug. pi*z*z*a."
+            ];
     otherwise
         error("Language not supported")
 
