@@ -60,8 +60,5 @@ opts.ToolboxMatlabPath = [fullfile(currentPath,"toolbox");
     ];
 
 opts.ToolboxVersion = "0.3.3";
-opts
-opts.ToolboxFiles
-!ls
 matlab.addons.toolbox.packageToolbox(opts);
 end
