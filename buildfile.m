@@ -21,44 +21,18 @@ end
 
 function buildTask(context)
 currentPath = context.Plan.RootFolder;
-matlab.apputil.package(fullfile(currentPath,"toolbox", "app", "jokeApp.prj"));
-while (~exist(fullfile(currentPath,"toolbox", "app", "jokeApp.mlappinstall"),"file"))
+matlab.apputil.package(fullfile(currentPath, "apps", "jokeApp.prj"));
+while (~exist(fullfile(currentPath,"toolbox", "jokeApp.mlappinstall"),"file"))
     pause(0.1)
 end
 end
 
-function releaseTask(context)
+function releaseTask(~)
 
 projectFile = "toolboxPackaging.prj";
-currentPath = context.Plan.RootFolder; % Needed of creating releases
 opts = matlab.addons.toolbox.ToolboxOptions(projectFile);
 opts.OutputFile = opts.OutputFile.replace(" in MATLAB","");
-opts.ToolboxGettingStartedGuide = fullfile(currentPath,"toolbox","doc","GettingStarted.mlx");
-opts.ToolboxImageFile = fullfile(currentPath,"images","Jokes in MATLAB.png");
-opts.ToolboxFiles = [
-    fullfile(currentPath,"toolbox","app","displayJoke.html");
-    fullfile(currentPath,"toolbox","app","jokeApp.mlapp");
-    fullfile(currentPath,"toolbox","app","jokeApp.mlappinstall");
-    fullfile(currentPath,"toolbox","app","jokeApp_resources","icon_16.png");
-    fullfile(currentPath,"toolbox","app","jokeApp_resources","icon_24.png");
-    fullfile(currentPath,"toolbox","app","jokeApp_resources","icon_48.png");
-    fullfile(currentPath,"toolbox","doc","GettingStarted.mlx");
-    fullfile(currentPath,"toolbox","doc","helptoc.xml");
-    fullfile(currentPath,"toolbox","info.xml");
-    fullfile(currentPath,"toolbox","internal","get_joke.m");
-    fullfile(currentPath,"toolbox","joke.m");
-    fullfile(currentPath,"toolbox","tests","test_get_joke.m");
-    fullfile(currentPath,"toolbox","tests","test_joke.m");
-    fullfile(currentPath,"toolbox","tests","test_jokeApp.m");
-    ];
-opts.ToolboxMatlabPath = [fullfile(currentPath,"toolbox");
-    fullfile(currentPath,"toolbox","app");
-    fullfile(currentPath,"toolbox","app","jokeApp_resources");
-    fullfile(currentPath,"toolbox","doc");
-    fullfile(currentPath,"toolbox","internal");
-    fullfile(currentPath,"toolbox","tests");
-    ];
-
 opts.ToolboxVersion = "0.3.3";
 matlab.addons.toolbox.packageToolbox(opts);
+
 end

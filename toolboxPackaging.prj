@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration file="/Users/gareth/Documents/MATLAB/MATLABJokes/toolboxPackaging.prj" location="/Users/gareth/Documents/MATLAB/MATLABJokes" name="toolboxPackaging" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="540786838" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/toolboxPackaging.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes" name="toolboxPackaging" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>Jokes in MATLAB</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />
@@ -20,12 +20,30 @@
     </param.products.version>
     <param.platforms />
     <param.guid>9de893c2-8c9a-4d19-a97a-1abd9873d1d8</param.guid>
-    <param.exclude.filters />
+    <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
+% from packaging.  Excludes should be listed relative to the toolbox folder.
+% Some examples of how to specify excludes are provided below:
+%
+% A single file in the toolbox folder:
+% .svn
+%
+% A single file in a subfolder of the toolbox folder:
+% example/.svn
+%
+% All files in a subfolder of the toolbox folder:
+% example/*
+%
+% All files of a certain name in all subfolders of the toolbox folder:
+% **/.svn
+%
+% All files matching a pattern in all subfolders of the toolbox folder:
+% **/*.bak
+%</param.exclude.filters>
     <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
     <param.examples />
     <param.demosxml />
     <param.apps>
-      <file>${PROJECT_ROOT}/toolbox/app/jokeApp.mlappinstall</file>
+      <file>${PROJECT_ROOT}/toolbox/jokeApp.mlappinstall</file>
     </param.apps>
     <param.registered.apps />
     <param.docs>${PROJECT_ROOT}/toolbox/info.xml</param.docs>
@@ -53,7 +71,6 @@
       <param.email />
       <param.output />
       <param.platforms />
-      <param.exclude.filters />
       <param.exclude.pcodedmfiles />
       <param.examples />
       <param.demosxml />
@@ -79,19 +96,19 @@
       <file>${PROJECT_ROOT}/toolbox</file>
     </fileset.rootdir>
     <fileset.rootfiles>
-      <file>${PROJECT_ROOT}/toolbox/app</file>
       <file>${PROJECT_ROOT}/toolbox/doc</file>
       <file>${PROJECT_ROOT}/toolbox/examples</file>
       <file>${PROJECT_ROOT}/toolbox/info.xml</file>
       <file>${PROJECT_ROOT}/toolbox/internal</file>
       <file>${PROJECT_ROOT}/toolbox/joke.m</file>
+      <file>${PROJECT_ROOT}/toolbox/jokeApp.mlappinstall</file>
       <file>${PROJECT_ROOT}/toolbox/tests</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="Jokes in MATLAB.mltbx" optional="false">/Users/gareth/Documents/MATLAB/MATLABJokes/Jokes in MATLAB.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="Jokes in MATLAB.mltbx" optional="false">/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/Jokes in MATLAB.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
