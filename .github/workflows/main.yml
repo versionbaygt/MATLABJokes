@@ -1,4 +1,4 @@
-name: Generate Test and Coverage Artifacts
+name: Run Tests
 on:
   push:
     branches:

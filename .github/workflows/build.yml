@@ -1,4 +1,4 @@
-name: Run Default Tasks in Build File
+name: Build and Release
 on:
     push:
       tags:
@@ -14,31 +14,25 @@ jobs:
         uses: matlab-actions/setup-matlab@v2
       - name: Run build
         uses: matlab-actions/run-build@v2
-      - name: Archive MATLAB Toolbox Installer
-        run: |
-          mkdir artifacts
-          mv Jokes.mltbx artifacts/
-      - name: Upload MATLAB Toolbox Installer
+      - name: Upload MLTBX
         uses: actions/upload-artifact@v4
         with:
           name: jokes-toolbox
-          path: artifacts/Jokes.mltbx
+          path: Jokes.mltbx
+
   release:
+    name: Create GitHub Release
     needs: build
     runs-on: ubuntu-latest
     permissions: write-all
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Download MATLAB Toolbox Installer
+    - name: Download MLTBX
       uses: actions/download-artifact@v4
       with:
         name: jokes-toolbox
     
     - name: Create GitHub Release with Auto-generated Release Notes
-      run: gh release create ${{ github.ref }} '/home/runner/work/MATLABJokes/MATLABJokes/Jokes.mltbx' --generate-notes
+      run: gh release create ${{ github.ref }} 'Jokes.mltbx' --generate-notes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
