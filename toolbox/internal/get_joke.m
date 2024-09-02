@@ -39,6 +39,15 @@ switch NameValueArgs.language
         jokes = [
             "Dada uma pizza circular com raio z e espessura a, retorne o volume da pizza. pi*z*z*a"
             "O meu password sao os ultimos 16 digitos de Pi."
+            "Em uma festa dos triângulos no prédio da matemática da USP estavam presentes o Cateto Adjacente, a Hipotenusa, o Ângulo Reto, o Seno, Cosseno, a Tangente, e quando chega o Cateto Oposto ele diz: Nossa, Cotangente!"
+            "Existem 10 tipos de pessoas no mundo: aquelas que entendem binário e aquelas que não entendem."
+            "Quantos programadores são necessários para trocar uma lâmpada? Nenhum. É um problema de hardware."
+            "Como se chamam 8 hobbits? Um hobbyte."
+            "Qual é a maior mentira de todo o universo? Eu li e concordo com os Termos & Condições."
+            "Define a tua password de wifi para 2444666668888888. Então, quando alguém perguntar, dizes que é 12345678."
+            "Mudei a minha password para 'incorreta'. Assim, sempre que me esqueço dela, o computador diz: A tua password é 'incorreta.'"
+            "Porque é que os programadores confundem sempre o Halloween com o Natal? Porque Oct 31 = Dec 25."
+            "Qual é o local de encontro favorito de um programador? Foo Bar."
             ];
     case "dutch"
         jokes = [
