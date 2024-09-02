@@ -20,7 +20,7 @@ classdef test_get_joke < matlab.unittest.TestCase
         end
         function languageEnglishTest(testCase)
             j = get_joke("jokeNumber",2,"language","english");
-            testCase.verifyEqual(j,"How many programmers does it take to change a light bulb? None. It’s a hardware problem.")
+            testCase.verifyEqual(j,"How many programmers does it take to change a light bulb? None. It's a hardware problem.")
         end
         function languagePortugueseTest(testCase)
             j = get_joke("jokeNumber",2,"language","portuguese");
