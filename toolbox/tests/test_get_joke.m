@@ -30,6 +30,10 @@ classdef test_get_joke < matlab.unittest.TestCase
             j = get_joke("jokeNumber",2,"language","dutch");
             testCase.verifyEqual(j,"Mijn wachtwoord is de laatste 16 cijfers van Pi.")
         end
+        function languageItalianTest(testCase)
+            j = get_joke("jokeNumber",2,"language","italian");
+            testCase.verifyEqual(j,"La mia password sono le ultime 16 cifre di Pi.")
+        end
     end
 
 end
