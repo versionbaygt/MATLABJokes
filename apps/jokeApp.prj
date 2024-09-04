@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3097013393" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="1521120214" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
     <param.appname>jokeApp</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />

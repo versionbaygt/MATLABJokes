@@ -19,6 +19,16 @@ plan("release").Dependencies = ["test", "build"];
 
 end
 
+function docsTask(context)
+currentPath = context.Plan.RootFolder;
+mlxfiles = dir(fullfile(currentPath,"toolbox","doc",filesep)+"*.mlx");
+mlxfiles = struct2table(mlxfiles);
+for idx = 1:height(mlxfiles)
+    fprintf("Exporting: %s\n",mlxfiles.name{idx});
+    export(fullfile(mlxfiles.folder{idx},mlxfiles.name{idx}),currentPath);
+end
+end
+
 function buildTask(context)
 currentPath = context.Plan.RootFolder;
 matlab.apputil.package(fullfile(currentPath, "apps", "jokeApp.prj"));
