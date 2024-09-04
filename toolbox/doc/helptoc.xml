@@ -45,14 +45,14 @@
             <!-- First category, with link to anchor in above page -->
             <tocitem target="helpfuncbycat.html#1">Functions
                 <!-- Inside category, list its functions alphabetically -->
-                <tocitem target="joke.html">joke</tocitem>
-                <tocitem target="get_joke.html">get_joke</tocitem>
+                <tocitem target="doc_joke.html">joke</tocitem>
+                <tocitem target="doc_get_joke.html">get_joke</tocitem>
                 <!-- ... -->
             </tocitem>
             <!-- Second category, with link to anchor in above page -->
             <tocitem target="helpfuncbycat.html#2">App
                 <!-- Inside category, list its functions alphabetically -->
-                <tocitem target="jokeApp.html">Joke App</tocitem>
+                <tocitem target="doc_jokeApp.html">Joke App</tocitem>
                 <!-- ... -->
             </tocitem>
         </tocitem>
