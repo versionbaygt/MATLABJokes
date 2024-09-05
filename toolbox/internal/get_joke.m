@@ -68,6 +68,13 @@ switch NameValueArgs.language
             "Perché i programmatori confondono sempre Halloween con Natale? Perché Oct 31 = Dec 25."
             "Qual è il posto preferito per incontrarsi di un programmatore? Foo Bar."
             ];
+    case "czech"
+        jokes = [
+            "Můj software nikdy nemá chyby. Jen rozvíjí náhodné funkce."
+            "Moje heslo je posledních 16 číslic Pí."
+            "Řekl bych ti vtip o UDP, ale možná ho nepřijmeš."
+            "Máme-li kruhovou pizzu s poloměrem z a tloušťkou a, vypočítejte objem pizzy. pi*z*z*a."
+            ];
     otherwise
         error("Language not supported")
 
