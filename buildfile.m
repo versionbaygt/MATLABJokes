@@ -33,7 +33,7 @@ function releaseTask(~)
 projectFile = "toolboxPackaging.prj";
 opts = matlab.addons.toolbox.ToolboxOptions(projectFile);
 opts.OutputFile = opts.OutputFile.replace(" in MATLAB","");
-opts.ToolboxVersion = "0.5.0";
+opts.ToolboxVersion = "0.6.0";
 matlab.addons.toolbox.packageToolbox(opts);
 
 end
