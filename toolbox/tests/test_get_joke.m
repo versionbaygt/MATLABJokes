@@ -4,15 +4,15 @@ classdef test_get_joke < matlab.unittest.TestCase
         % Test methods
         function exampleTest(testCase)
             j = get_joke();
-            testCase.verifyEqual(class(j), 'string')
+            testCase.verifyClass(j, "string")
             j = get_joke("jokeNumber", 2);
-            testCase.verifyEqual(class(j), 'string')
+            testCase.verifyClass(j, "string")
             j = get_joke("language", "english");
-            testCase.verifyEqual(class(j), 'string')
+            testCase.verifyClass(j, "string")
             j = get_joke("jokeNumber", 2, "language", "english");
-            testCase.verifyEqual(class(j), 'string')
+            testCase.verifyClass(j, "string")
             j = get_joke("language", "english", "jokeNumber", 2);
-            testCase.verifyEqual(class(j), 'string')
+            testCase.verifyClass(j, "string")
         end
         function languageEnglishTest(testCase)
             j = get_joke("jokeNumber", 2, "language", "english");
