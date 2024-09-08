@@ -2,7 +2,7 @@ classdef test_joke < matlab.unittest.TestCase
     methods (Test)
         % Test methods
         function exampleTest(TestCase) %#ok<MANU>
-            joke()
+            evalc("joke()");
         end
     end
 
