@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3097013393" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3567265428" file="/Users/jorik/src/VersionBay/MATLABJokes/apps/jokeApp.prj" location="/Users/jorik/src/VersionBay/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
     <param.appname>jokeApp</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />
@@ -40,19 +40,12 @@
     </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes" name="apps" optional="false">/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps</file>
+      <file location="/Users/jorik/src/VersionBay/MATLABJokes" name="apps" optional="false">/Users/jorik/src/VersionBay/MATLABJokes/apps</file>
     </build-deliverables>
     <workflow />
     <matlab>
       <root>/Applications/MATLAB_R2024a.app</root>
-      <toolboxes>
-        <toolbox name="matlabcoder" />
-      </toolboxes>
-      <toolbox>
-        <matlabcoder>
-          <enabled>true</enabled>
-        </matlabcoder>
-      </toolbox>
+      <toolboxes />
     </matlab>
     <platform>
       <unix>true</unix>
