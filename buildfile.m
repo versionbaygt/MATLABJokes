@@ -14,7 +14,7 @@ plan("test") = TestTask;
 
 plan("docs").Inputs = "toolbox/doc/**/*.mlx";
 plan("docs").Outputs = plan("docs").Inputs. ...
-    replace(".mlx",".html").replace("toolbox/doc","html");
+    replace(".mlx",".html").replace("toolbox\doc","html");
     
 
 % Make the "archive" task the default task in the plan
