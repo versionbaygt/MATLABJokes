@@ -56,6 +56,26 @@ switch NameValueArgs.language
             "Ik zou je een UDP-grap vertellen, maar je krijgt hem misschien niet."
             "Gegeven een cirkelvormige pizza met straal z en dikte a, geef het volume van de pizza terug. pi*z*z*a."
             ];
+    case "italian"
+        jokes = [
+            "Data una pizza circolare con raggio z e spessore a, restituisci il volume della pizza. pizz*a"
+            "La mia password sono le ultime 16 cifre di Pi."
+            "Esistono 10 tipi di persone al mondo: quelli che capiscono il binario e quelli che non lo capiscono."
+            "Quanti programmatori servono per cambiare una lampadina? Nessuno. È un problema di hardware."
+            "Come si chiamano 8 hobbit? Un hobbyte."
+            "Qual è la più grande bugia dell'universo? Ho letto e accetto i Termini e Condizioni."
+            "Imposta la tua password wifi su 2444666668888888. Quindi, quando qualcuno te la chiede, dici che è 12345678."
+            "Perché i programmatori confondono sempre Halloween con Natale? Perché Oct 31 = Dec 25."
+            "Qual è il posto preferito per incontrarsi di un programmatore? Foo Bar."
+            ];
+    case "czech"
+        jokes = [
+            "Můj software nikdy nemá chyby. Jen rozvíjí náhodné funkce."
+            "Moje heslo je posledních 16 číslic Pí."
+            "Řekl bych ti vtip o UDP, ale možná ho nepřijmeš."
+            "Máme-li kruhovou pizzu s poloměrem z a tloušťkou a, vypočítejte objem pizzy. pi*z*z*a."
+            "Tenhle release je poslední. Žádný další nebude."
+            ];
     otherwise
         error("Language not supported")
 
