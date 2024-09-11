@@ -6,6 +6,9 @@
 [![View Jokes in MATLAB on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/172039-jokes-in-matlab)
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=versionbaygt/MATLABJokes)
 
+[![Static Badge](https://img.shields.io/badge/docs-latest-blue?logo=github)](https://versionbaygt.github.io/MATLABJokes/)
+
+
 # Jokes in MATLAB Toolbox
 
 Often at conferences or meetups there is a moment when the hosts need to distract the audience for a little. This Toolbox is meant to just show a funny joke from within MATLAB.
