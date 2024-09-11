@@ -33,6 +33,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Start display server
+        run: |
+        sudo apt-get install xvfb
+        Xvfb :99 &
+        echo "DISPLAY=:99" >> $GITHUB_ENV
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
