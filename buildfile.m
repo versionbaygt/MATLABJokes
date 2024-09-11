@@ -12,6 +12,11 @@ plan("check") = CodeIssuesTask(WarningThreshold=1, ...
 % Add a task to run tests
 plan("test") = TestTask;
 
+plan("docs").Inputs = "toolbox/doc/**/*.mlx";
+plan("docs").Outputs = plan("docs").Inputs. ...
+    replace(".mlx",".html").replace("toolbox/doc","html");
+    
+
 % Make the "archive" task the default task in the plan
 plan.DefaultTasks = "release";
 
@@ -20,12 +25,13 @@ plan("release").Dependencies = ["test", "build"];
 end
 
 function docsTask(context)
-currentPath = context.Plan.RootFolder;
-mlxfiles = dir(fullfile(currentPath,"toolbox","doc",filesep)+"*.mlx");
-mlxfiles = struct2table(mlxfiles);
-for idx = 1:height(mlxfiles)
-    fprintf("Exporting: %s\n",mlxfiles.name{idx});
-    export(fullfile(mlxfiles.folder{idx},mlxfiles.name{idx}),currentPath);
+makeFolder("html")
+mlxFiles = context.Task.Inputs.paths;
+htmlFiles = context.Task.Outputs.paths;
+for idx = 1:numel(mlxFiles)
+    fprintf("Exporting: %s\n",mlxFiles(idx));
+    fprintf("Exporting: %s\n",htmlFiles(idx));
+    export(mlxFiles(idx),htmlFiles(idx));
 end
 end
 
@@ -46,4 +52,14 @@ opts.OutputFile = opts.OutputFile.replace(" in MATLAB", "");
 opts.ToolboxVersion = "0.6.1";
 matlab.addons.toolbox.packageToolbox(opts);
 
+end
+
+function makeFolder(folder)
+% Creates a folder if it doesn't exist
+fullFolder = fullfile(pwd, folder);
+if exist(fullFolder,"dir")
+    return
+end
+disp("Creating """ + folder + """ folder");
+mkdir(fullFolder);
 end
