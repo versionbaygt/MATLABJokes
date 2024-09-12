@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3567265428" file="/Users/jorik/src/VersionBay/MATLABJokes/apps/jokeApp.prj" location="/Users/jorik/src/VersionBay/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3567265428" file="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps/jokeApp.prj" location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
     <param.appname>jokeApp</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />
@@ -13,7 +13,7 @@
     <param.summary>MATLAB App that tells a joke.</param.summary>
     <param.description>Simple MATLAB App that gets installed with MATLAB Jokes Toolbox.</param.description>
     <param.screenshot>/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/images/Jokes in MATLAB.png</param.screenshot>
-    <param.version>0.2</param.version>
+    <param.version>0.3</param.version>
     <param.products.name>
       <item>MATLAB</item>
     </param.products.name>
@@ -40,12 +40,19 @@
     </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file location="/Users/jorik/src/VersionBay/MATLABJokes" name="apps" optional="false">/Users/jorik/src/VersionBay/MATLABJokes/apps</file>
+      <file location="/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes" name="apps" optional="false">/Users/gareth/Documents/MATLAB/clonedJokes/MATLABJokes/apps</file>
     </build-deliverables>
     <workflow />
     <matlab>
       <root>/Applications/MATLAB_R2024a.app</root>
-      <toolboxes />
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
     </matlab>
     <platform>
       <unix>true</unix>
