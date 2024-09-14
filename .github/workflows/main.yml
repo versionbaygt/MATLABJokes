@@ -12,7 +12,17 @@ jobs:
     strategy:
       matrix:
         release: [R2021a, R2021b, R2022a, R2022b, R2023a, R2023b, R2024a]
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-20.04, windows-2022, macos-14]
+        exclude:
+          - release: [R2021a, R2021b, R2022a]
+            os: windows-2022
+          - release: [R2021a, R2021b, R2022a, R2022b, R2023a]
+            os: macos-14
+        include:
+          - release: [R2021a, R2021b, R2022a]
+            os: windows-2019
+          - release: [R2021a, R2021b, R2022a, R2022b, R2023a]
+            os: macos-12
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
