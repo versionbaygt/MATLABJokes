@@ -11,43 +11,8 @@ jobs:
     name: Run MATLAB Tests
     strategy:
       matrix:
-        release: [R2021a, R2021b, R2022a, R2022b, R2023a, R2023b, R2024a, R2024b]
-        os: [ubuntu-20.04, windows-2022, macos-14]
-        exclude:
-          - release: R2021a
-            os: windows-2022
-          - release: R2021b
-            os: windows-2022
-          - release: R2022a
-            os: windows-2022
-          - release: R2021a
-            os: macos-14
-          - release: R2021b
-            os: macos-14
-          - release: R2022a
-            os: macos-14
-          - release: R2022b
-            os: macos-14
-          - release: R2023a
-            os: macos-14
-        include:
-          - release: R2021a
-            os: windows-2019
-          - release: R2021b
-            os: windows-2019
-          - release: R2022a
-            os: windows-2019
-          - release: R2021a
-            os: macos-12
-          - release: R2021b
-            os: macos-12
-          - release: R2022a
-            os: macos-12
-          - release: R2022b
-            os: macos-12
-          - release: R2023a
-            os: macos-12
-      fail-fast: false
+        release: [R2021a, R2021b, R2022a, R2022b, R2023a, R2023b, R2024a, R2024b, R2025a, R2025b]
+        os: [ubuntu-22.04, windows-2022, macos-14]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out repository
