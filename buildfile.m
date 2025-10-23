@@ -46,10 +46,10 @@ end
 
 function releaseTask(~)
 
-projectFile = "toolboxPackaging.prj";
+projectFile = "JokesInMATLAB.prj";
 opts = matlab.addons.toolbox.ToolboxOptions(projectFile);
 opts.OutputFile = opts.OutputFile.replace(" in MATLAB", "");
-opts.ToolboxVersion = "0.7.0";
+opts.ToolboxVersion = "0.8.0";
 matlab.addons.toolbox.packageToolbox(opts);
 
 end

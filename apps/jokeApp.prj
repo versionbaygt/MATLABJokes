@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="19263094" file="/Users/jorik/src/VersionBay/MATLABJokes/apps/jokeApp.prj" location="/Users/jorik/src/VersionBay/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="2364559423" file="/Users/jorik/src/VersionBay/MATLABJokes/apps/jokeApp.prj" location="/Users/jorik/src/VersionBay/MATLABJokes/apps" name="jokeApp" target="target.mlapps" target-name="Package App">
     <param.appname>jokeApp</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email />
@@ -44,7 +44,7 @@
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>/Applications/MATLAB_R2024b.app</root>
+      <root>/Applications/MATLAB_R2025b.app</root>
       <toolboxes />
     </matlab>
     <platform>
